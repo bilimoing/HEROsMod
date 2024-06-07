@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using Terraria;
 using Terraria.Localization;
+using Terraria.ID;
 
 namespace HEROsMod.HEROsModNetwork
 {
@@ -235,7 +236,7 @@ namespace HEROsMod.HEROsModNetwork
 				Vector2 destination = reader.ReadVector2();
 				Main.player[playerNumber].Teleport(destination, 1, 0);
 				RemoteClient.CheckSection(playerNumber, destination, 1);
-				NetMessage.SendData(65, -1, -1, null, 0, playerNumber, destination.X, destination.Y, 1, 0, 0);
+				NetMessage.SendData(MessageID.TeleportEntity, -1, -1, null, 0, playerNumber, destination.X, destination.Y, 1, 0, 0);
 				//int num169 = -1;
 				//float num170 = 9999f;
 				//for (int num171 = 0; num171 < 255; num171++)
@@ -281,7 +282,7 @@ namespace HEROsMod.HEROsModNetwork
 				{
 					if (Main.player[j].active && Main.player[j].name.ToLower() == playerToKick)
 					{
-						NetMessage.SendData(2, j, -1, NetworkText.FromKey("CLI.KickMessage", new object[0]), 0, 0f, 0f, 0f, 0, 0, 0);
+						NetMessage.SendData(MessageID.Kick, j, -1, NetworkText.FromKey("CLI.KickMessage", new object[0]), 0, 0f, 0f, 0f, 0, 0, 0);
 					}
 				}
 			}

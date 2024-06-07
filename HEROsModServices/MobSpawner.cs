@@ -827,7 +827,7 @@ namespace HEROsMod.HEROsModServices
 				Main.NewText(HEROsMod.HeroText("UnderworldToSpawnWoF"));
 				return;
 			}
-			if (Main.netMode == 1)
+			if (Main.netMode == NetmodeID.MultiplayerClient)
 			{
 				return;
 			}
@@ -878,12 +878,12 @@ namespace HEROsMod.HEROsModServices
 		IL_162:
 			num3 = num5 * 16;
 			int num7 = NPC.NewNPC(NPC.GetSource_NaturalSpawn(), num2, num3, 113, 0);
-			if (Main.netMode == 0)
+			if (Main.netMode == NetmodeID.SinglePlayer)
 			{
 				Main.NewText(Language.GetTextValue("Announcement.HasAwoken", Main.npc[num7].TypeName), 175, 75, 255);
 				return;
 			}
-			if (Main.netMode == 2)
+			if (Main.netMode == NetmodeID.Server)
 			{
 				ChatHelper.BroadcastChatMessage(NetworkText.FromKey("Announcement.HasAwoken", new object[]
 						{
