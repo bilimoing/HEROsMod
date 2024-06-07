@@ -328,26 +328,6 @@ namespace HEROsMod.HEROsModNetwork
 				SendWaypointListToPlayer(playerNumber);
 				SendRegionListToPlayer(playerNumber);
 				SendCurrentTogglesToPlayer(playerNumber);
-				//CTF.CTFMessages.SendTeamObjectPositionToPlayer(CTF.CaptureTheFlag.RedTeam.Flag, playerNumber);
-				//CTF.CTFMessages.SendTeamObjectPositionToPlayer(CTF.CaptureTheFlag.BlueTeam.Flag, playerNumber);
-				//CTF.CTFMessages.SendTeamObjectPositionToPlayer(CTF.CaptureTheFlag.RedTeam.FlagPlatform, playerNumber);
-				//CTF.CTFMessages.SendTeamObjectPositionToPlayer(CTF.CaptureTheFlag.BlueTeam.FlagPlatform, playerNumber);
-				//CTF.CTFMessages.SendTeamObjectPositionToPlayer(CTF.CaptureTheFlag.RedTeam.SpawnPlatform, playerNumber);
-				//CTF.CTFMessages.SendTeamObjectPositionToPlayer(CTF.CaptureTheFlag.BlueTeam.SpawnPlatform, playerNumber);
-				//CTF.CTFMessages.SendTeamListToPlayer(playerNumber);
-				//if (CTF.CaptureTheFlag.InPregameLobby || CTF.CaptureTheFlag.GameInProgress)
-				//{
-				//	CTF.CTFMessages.SendCTFSettings(playerNumber);
-				//}
-				//if (CTF.CaptureTheFlag.InPregameLobby)
-				//{
-				//	CTF.CTFMessages.TellClientLobbyStarted(playerNumber);
-				//}
-				//else if (CTF.CaptureTheFlag.GameInProgress)
-				//{
-				//	CTF.CTFMessages.TellClientGameStarted(playerNumber);
-				//	CTF.CTFMessages.ChangePlayerTeam(Network.Players[playerNumber], CTF.TeamColor.None);
-				//}
 				Network.SendTextToPlayer(HEROsMod.HeroText("LoginInstructions"), playerNumber, Color.Red);
 			}
 		}
@@ -650,10 +630,6 @@ namespace HEROsMod.HEROsModNetwork
 		{
 			if (Network.NetworkMode == NetworkMode.Server) return;
 			int playerIndex = reader.ReadInt32();
-			//if (CTF.CaptureTheFlag.GameInProgress)
-			//{
-			//	Main.player[playerIndex].active = false;
-			//}
 			if (PlayerJoined != null)
 			{
 				PlayerJoined(Network.Players[playerIndex]);

@@ -33,7 +33,6 @@ namespace HEROsMod.HEROsModNetwork
 		public static Group AdminGroup;
 		public static bool stuff = false;
 
-		//public static Group CTFGroup;
 		public static int AuthCode;
 
 		private static Color[] chatColor = new Color[]{
@@ -122,8 +121,6 @@ namespace HEROsMod.HEROsModNetwork
 				//TileChangeController.Init();
 				Groups = DatabaseController.GetGroups();
 				//Regions = DatabaseController.GetRegions();
-				//CTFGroup = new Group("CTFGroup");
-				//CTFGroup.Permissions["StartCTF"] = true;
 
 				foreach (Group group in Groups)
 				{
@@ -204,12 +201,12 @@ namespace HEROsMod.HEROsModNetwork
 		{
 			bool canBuild = false;
 
-			if (player.Group.IsAdmin/* && !CTF.CaptureTheFlag.GameInProgress*/)
+			if (player.Group.IsAdmin)
 			{
 				canBuild = true;
 			}
 
-			if (!canBuild /*&& !CTF.CaptureTheFlag.GameInProgress*/ && player.Group.HasPermission("ModifyTerrain"))
+			if (!canBuild && player.Group.HasPermission("ModifyTerrain"))
 			{
 				canBuild = true;
 				for (int i = 0; i < Regions.Count; i++)
@@ -905,9 +902,6 @@ namespace HEROsMod.HEROsModNetwork
 			//        case MessageType.LoginMessage:
 			//            LoginService.ProcessData(ref binaryReader, playerNumber);
 			//            break;
-			//        case MessageType.CTFMessage:
-			//            CTF.CTFMessages.ProcessData(ref binaryReader, playerNumber);
-			//            break;
 			//    }
 			//}
 
@@ -933,9 +927,6 @@ namespace HEROsMod.HEROsModNetwork
 					case MessageType.LoginMessage:
 						LoginService.ProcessData(ref binaryReader, playerNumber);
 						break;
-						//case MessageType.CTFMessage:
-						//	CTF.CTFMessages.ProcessData(ref binaryReader, playerNumber);
-						//	break;
 				}
 			}
 		}
@@ -975,13 +966,6 @@ namespace HEROsMod.HEROsModNetwork
 		public static void PlayerLeft(int playerIndex)
 		{
 			Players[playerIndex].Reset();
-			//if (CTF.CaptureTheFlag.GameInProgress || CTF.CaptureTheFlag.InPregameLobby)
-			//{
-			//	if (playerIndex == CTF.CaptureTheFlag.LobbyStartedBy)
-			//	{
-			//		CTF.CaptureTheFlag.EndGame();
-			//	}
-			//}
 			GeneralMessages.TellClientsPlayerLeft(playerIndex);
 		}
 
@@ -1199,7 +1183,6 @@ namespace HEROsMod.HEROsModNetwork
 			GeneralMessage,
 			LoginMessage,
 			SnoopMessage,
-			CTFMessage
 		}
 
 		public enum TileModifyType : byte

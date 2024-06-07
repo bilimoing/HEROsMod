@@ -300,7 +300,6 @@ namespace HEROsMod
 		{
 			//	IncreaseNetworkMessageSize();
 			HEROsModNetwork.Network.Init();
-			//	HEROsModNetwork.CTF.CaptureTheFlag.Init();
 			//if (ModUtils.NetworkMode != NetworkMode.Server)
 			if (!Main.dedServ)
 			{
@@ -527,7 +526,6 @@ namespace HEROsMod
 			//if (ModUtils.NetworkMode == NetworkMode.Client)
 			{
 				//	ServiceHotbar.Visible = HEROsModNetwork.Network.ServerUsingHEROsMod;
-				//	ServiceController.AddService(new CTFService());
 				//ServiceController.MyGroupChanged();
 			}
 			//HEROsModVideo.Services.NPCSpawnData.NPCSpawnDataBuilder.Start();
@@ -605,7 +603,6 @@ namespace HEROsMod
 			}
 			HEROsModNetwork.Network.Update();
 			//CheckIfGameEnteredOrLeft(); // Only does GameEntered, since can't detect left. weird state. Probably should use ModPlayer.OnEnter/Exit anyway
-			//	HEROsModNetwork.CTF.CaptureTheFlag.Update();
 		}
 
 		//Not working since update not called in title screen.
