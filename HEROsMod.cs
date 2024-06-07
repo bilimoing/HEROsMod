@@ -698,14 +698,6 @@ namespace HEROsMod
 			*/
 		}
 
-		public static void DrawBehindUI(SpriteBatch spriteBatch)
-		{
-			if (!Main.gameMenu)
-			{
-				HEROsModVideo.Services.MobHUD.MobInfo.Draw(spriteBatch);
-			}
-		}
-
 		public static void DrawWorldUI(SpriteBatch spriteBatch)
 		{
 			if (!Main.gameMenu)
