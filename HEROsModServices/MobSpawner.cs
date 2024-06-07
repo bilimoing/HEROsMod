@@ -282,6 +282,7 @@ namespace HEROsMod.HEROsModServices
 					category.Add(npc);
 				}
 			}
+			// TODO: sort by BossChecklist order?
 			searchResults = category;
 			BuildList();
 			searchBox.Text = string.Empty;
