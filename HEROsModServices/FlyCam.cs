@@ -22,6 +22,8 @@ namespace HEROsMod.HEROsModServices
 
 		internal static Vector2 FlyCamPosition = Vector2.Zero;
 
+		internal static bool ForceReset = false;
+
 		internal static bool Enabled { get; set; }
 
 		internal static bool LockCamera { get; set; }
@@ -179,6 +181,12 @@ namespace HEROsMod.HEROsModServices
 
 		public override void ModifyScreenPosition()
 		{
+			if (FlyCam.ForceReset)
+			{
+				FlyCam.ForceReset = false;
+				FlyCam.FlyCamPosition = Main.screenPosition;
+				// Camera pan from teleport still takes effect so it's not centered always, but it's better than nothing
+			}
 			if (FlyCam.Enabled)
 			{
 				Main.screenPosition = FlyCam.FlyCamPosition;
