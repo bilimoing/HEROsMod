@@ -71,6 +71,7 @@ Mods: {
 		NPCSpawner: Призыватель Существ
 		All: Все
 		TownNPCs: Городские НИП'ы
+		// Critters: Critters
 		Friendly: Дружелюбные
 		Boss: Боссы
 		Mod: Существа Модификаций
