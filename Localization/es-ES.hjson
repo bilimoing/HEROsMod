@@ -75,6 +75,11 @@ Mods: {
 		Friendly: Amistosos
 		Boss: Jefes
 		Mod: Mod
+		// ID: ID
+		// Health: Health
+		// Damage: Damage
+		// Defense: Defense
+		// KnockbackResistance: Knockback Resistance
 		UnderworldToSpawnWoF: "Ve al inframundo para invocar al Muro carnoso "
 		MiscOptions: Opciones misceláneas
 		RevealMap: Revelar mapa

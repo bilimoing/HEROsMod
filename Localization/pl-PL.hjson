@@ -75,6 +75,11 @@ Mods: {
 		// Friendly: Friendly
 		// Boss: Boss
 		// Mod: Mod
+		// ID: ID
+		// Health: Health
+		// Damage: Damage
+		// Defense: Defense
+		// KnockbackResistance: Knockback Resistance
 		// UnderworldToSpawnWoF: Please move to the underworld to spawn WoF
 		// MiscOptions: Misc. Options
 		// RevealMap: Reveal Map

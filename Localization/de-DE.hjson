@@ -75,6 +75,11 @@ Mods: {
 		Friendly: Freundlich
 		Boss: Boss
 		Mod: Mod
+		// ID: ID
+		// Health: Health
+		// Damage: Damage
+		// Defense: Defense
+		// KnockbackResistance: Knockback Resistance
 		UnderworldToSpawnWoF: Bitte begebe dich in die Hölle um die Fleischwand zu beschwören.
 		MiscOptions: Weitere Optionen
 		RevealMap: Weltkarte aufdeken

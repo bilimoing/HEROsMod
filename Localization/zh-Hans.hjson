@@ -75,6 +75,11 @@ Mods: {
 		Friendly: 友好
 		Boss: Boss
 		Mod: 模组
+		// ID: ID
+		// Health: Health
+		// Damage: Damage
+		// Defense: Defense
+		// KnockbackResistance: Knockback Resistance
 		UnderworldToSpawnWoF: 请在地狱召唤血肉之墙
 		MiscOptions: 杂项
 		RevealMap: 点亮全图

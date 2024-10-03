@@ -660,7 +660,7 @@ namespace HEROsMod.HEROsModServices
 
 			float statScale = .4f;
 
-			UILabel lID = new UILabel("ID");
+			UILabel lID = new UILabel(HEROsMod.HeroText("ID"));
 			lID.Scale = statScale;
 			lID.X = Spacing;
 			lID.Y = yPos;
@@ -677,7 +677,7 @@ namespace HEROsMod.HEROsModServices
 
 			if (npc.Health > 0)
 			{
-				UILabel lHealth = new UILabel("Health");
+				UILabel lHealth = new UILabel(HEROsMod.HeroText("Health"));
 				lHealth.Scale = statScale;
 				lHealth.X = Spacing;
 				lHealth.Y = yPos;
@@ -695,7 +695,7 @@ namespace HEROsMod.HEROsModServices
 
 			if (npc.Damage > 0)
 			{
-				UILabel lDamage = new UILabel("Damage");
+				UILabel lDamage = new UILabel(HEROsMod.HeroText("Damage"));
 				lDamage.Scale = statScale;
 				lDamage.X = Spacing;
 				lDamage.Y = yPos;
@@ -713,7 +713,7 @@ namespace HEROsMod.HEROsModServices
 
 			if (npc.Defense > 0)
 			{
-				UILabel lDefense = new UILabel("Defense");
+				UILabel lDefense = new UILabel(HEROsMod.HeroText("Defense"));
 				lDefense.Scale = statScale;
 				lDefense.X = Spacing;
 				lDefense.Y = yPos;
@@ -731,7 +731,7 @@ namespace HEROsMod.HEROsModServices
 
 			if (npc.KncokbackResist > 0)
 			{
-				UILabel lKncokbackResist = new UILabel("Knockback Resistance");
+				UILabel lKncokbackResist = new UILabel(HEROsMod.HeroText("KnockbackResistance"));
 				lKncokbackResist.Scale = statScale;
 				lKncokbackResist.X = Spacing;
 				lKncokbackResist.Y = yPos;

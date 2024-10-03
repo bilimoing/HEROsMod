@@ -75,6 +75,11 @@ Mods: {
 		Friendly: Amigável
 		Boss: Chefe
 		Mod: Mod
+		// ID: ID
+		// Health: Health
+		// Damage: Damage
+		// Defense: Defense
+		// KnockbackResistance: Knockback Resistance
 		UnderworldToSpawnWoF: Por favor, vá para o submundo para invocar a PdC
 		MiscOptions: Opções Diversas
 		RevealMap: Revelar Mapa
