@@ -75,11 +75,11 @@ Mods: {
 		Friendly: Дружелюбные
 		Boss: Боссы
 		Mod: Из модов
-		// ID: ID
-		// Health: Health
-		// Damage: Damage
-		// Defense: Defense
-		// KnockbackResistance: Knockback Resistance
+		ID: ID
+		Health: Здоровье
+		Damage: Урон
+		Defense: Защита
+		KnockbackResistance: Сопротивление к отбрасыванию
 		UnderworldToSpawnWoF: Стену плоти можно призвать только в преисподней
 		MiscOptions: Прочее
 		RevealMap: Исследовать всю карту
